@@ -2,15 +2,15 @@
 
 clear
 
-echo "=================================="
-echo " _   _  _____ _               _ _ "
-echo "| | | ||  ___(_)             | | |"
-echo "| | | || |__  _ _ __ _____  _| | |"
-echo "| | | ||  __|| | '__/ _ \ \/ / | |"
-echo "| |_| || |___| | | |  __/>  <| | |"
-echo " \___/ \____/|_|_|  \___/_/\_\_|_|"
-echo "           uFirewall Tool          "
-echo "=================================="
+echo "         __ _                        _ _ "
+echo "        / _(_)                      | | |"
+echo "  _   _| |_ _ _ __ _____      ____ _| | |"
+echo " | | | |  _| | '__/ _ \\ \\ /\\ / / _\` | | |"
+echo " | |_| | | | | | |  __/\\ V  V / (_| | | |"
+echo "  \\__,_|_| |_|_|  \\___| \\_/\\_/ \\__,_|_|_|"
+echo "                                           "
+echo "               uFirewall Tool               "
+echo "============================================"
 echo ""
 
 while true; do
@@ -28,13 +28,13 @@ while true; do
             ;;
         2)
             read -p "Enter port number to OPEN: " port
-            sudo ufw allow $port
+            sudo ufw allow "$port"
             sudo ufw reload
             echo "Port $port is now ALLOWED"
             ;;
         3)
             read -p "Enter port number to CLOSE: " port
-            sudo ufw deny $port
+            sudo ufw deny "$port"
             sudo ufw reload
             echo "Port $port is now BLOCKED"
             ;;
